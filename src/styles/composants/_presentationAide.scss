@@ -1,0 +1,80 @@
+.divAide {
+    height: 800px;
+}
+.divIgerie {
+    h4 {
+        text-align: center;
+        font-size: 26px;
+        font-weight: bold;
+        color: $color-text-dark;
+    }
+}
+.divPresentationAide {
+    display:flex;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+    .listHelp{
+        width: 50%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 1000px;
+        border-radius: 50px;
+        background-color: $color-primary;
+        padding: 30px 20px;
+        font-size: 20px;
+        color: $color-text;
+        ul {
+            width: 90%;
+            margin: auto;
+        }
+        li {
+            list-style-type: disc;
+            margin-bottom: 5px;
+        }
+        p {
+            padding-left: 2rem;
+            font-weight: bold;
+            padding-top: 20px;
+        }
+    }
+    .titleHelp{
+        width: 40%;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        padding-left: 40px;
+        h2 {
+            font-size: 26px;
+            color: $color-text-dark;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+}
+@media all and (max-width: 900px) {
+    .divAide {
+        height: auto;
+    }
+    .divPresentationAide  {
+        flex-direction: column-reverse;
+        .listHelp, .titleHelp {
+            width: 95%;
+        }
+    }
+    .titleEthique {
+        width: 95% !important;
+    }
+    .blockIgerieQuoi {
+        flex-direction: column;
+        .titleQuoi {
+            width: 95% !important;
+        }
+        .listQuoi {
+            width: 95% !important;
+        }
+    }
+}

@@ -1,0 +1,206 @@
+.divModify {
+    height: 100vh;
+    .headerModify {
+        display: flex;
+        justify-content: center;
+        height: 20%;
+        align-items: center;
+    }
+    img {
+        width: 100px;
+        height: 120px;
+    }
+    .iconReturn {
+        font-size: 36px;
+        color: $color-text-dark;
+        position:absolute;
+        left: 20px;
+        top: 90px;
+        cursor: pointer;
+    }
+    .modifyTab {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        border-top: 1px solid $color-text-dark;
+        @media all and (max-width: 700px) {
+            flex-direction: column;
+        }
+    }
+    .tabs{
+        margin:0 auto;
+        width:70%;
+        text-align:center;
+      }
+      
+      .modify-buttons{
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        border-right:1px solid $color-text-dark;
+        justify-content: space-between;
+        @media all and (max-width: 700px) {
+            flex-direction: row;
+            width: 100%;
+            height: 60px;
+        }
+        button{
+            font-size:20px;
+            background:transparent;
+            height: 34%;
+            width: 100%;
+            border:1px solid $color-text-dark;
+            outline:none;
+            padding:10px 20px ;
+            cursor:pointer;
+            color:$color-text-dark;
+            background-color: $color-text;
+            transition:all ease-in-out .2s;
+            @media all and (max-width: 700px) {
+                height: 100%;
+            }
+            
+        }
+        .active{
+            color:$color-text;
+            background-color: darken($color: $color-secondary, $amount: 10);
+        }
+      }
+      .modify-content {
+        display: flex;
+        justify-content: center;
+        width: 75%;
+        height: 100%;
+        @media all and (max-width: 700px) {
+            flex-direction: column;
+            width: 100%;
+        }
+      }
+}
+.formOther {
+    margin-top: auto !important;
+}
+.formImage {
+    margin-top: auto !important;
+    img {
+      width: 60%;
+      height: auto;
+      margin-bottom: 50px;
+    }
+  }
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    height: auto;
+    margin: auto;
+    margin-top: 30px;
+    width: 90%;
+    min-width: 400px;
+    max-width: 700px;
+    background-color: #4b0f0ba9;
+    border-radius: 20px;
+    padding: 30px 15px;
+    label {
+        color: $color-text;
+        font-weight: bold;
+        font-size: 19px;
+    }
+    input, select {
+        height: 50px;
+    }
+    .modifyText {
+        height: 80%;
+        align-items: center;
+    }
+    .champDivModify {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+        @media all and (max-width: 700px) {
+            margin-top: 0;
+        }
+        .inputTextModify {
+            width: 88%;
+            min-width: 350px;
+            height: 500px;
+            border: 1px solid $color-text-dark;
+            border-radius: 20px;
+            background-color: $color-text;
+            color: $color-text-dark;
+            padding: 20px;
+        }
+        .inputText {
+            padding: 5px ;
+            border-radius: 10px;
+            background-color: $color-text;
+            border: none;
+            &:focus {
+                outline: none;
+            }
+        }
+        .listSousTheme {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 10px;
+            .textSoustheme {
+                background-color:  $color-text-dark;
+                border-radius: 10px;
+                display: flex;
+                padding: 5px 10px;
+                color: $color-text;
+                p {
+                    margin: 0;
+                }
+                button {
+                    background-color: inherit;
+                    border: none;
+                    color: $color-text;
+                    margin-left: 15px;
+                    height: auto;
+                }
+            }
+        }
+        .divSoustheme {
+            width: 100%;
+            display: flex;
+        }
+        .sousTheme {
+            flex: 1;
+            border-radius: 10px 0 0 10px !important;
+        }
+        .buttonAdd {
+           flex: 0.1;
+           border-radius: 0 10px 10px 0 !important;
+           border: none;
+           border-left: 1px solid $color-text-dark;
+           background-color: $color-text;
+        }
+        select {
+            padding: 5px ;
+            border-radius: 10px;
+            background-color: $color-text;
+            border: none;
+            cursor: pointer;
+            option {
+                cursor: pointer !important;
+                &:hover {
+                    background-color: darken($color: $color-text, $amount: 10) !important;
+                }
+            }
+        }
+    }
+    .modifyArticle {
+        background-color: $color-secondary;
+        color: $color-text;
+        border: none;
+        padding: 10px;
+        width: 50%;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+}

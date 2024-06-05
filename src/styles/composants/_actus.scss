@@ -1,0 +1,147 @@
+.divActus {
+    display: flex;
+    height: 750px;
+    margin-bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-secondary;
+    max-width: 1400px;
+    width: 92%;
+    margin: auto;
+    h3 {
+        height: 50px;
+        font-size: 26px;
+        text-align: center;
+        font-weight: bold;
+        color: $color-text;
+    }
+    .divCentralArticle {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        padding: 40px;
+        justify-content: space-evenly;
+        .listNews {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 30px;
+            .itemArticle {
+                background-color: $color-primary;
+                padding: 10px;
+                height: 230px;
+                width: 180px;
+                border-radius: 15px;
+                .textArticle  {
+                    height: 140px;
+                    width: 100%;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    position: relative;
+                    p {
+                        width: 100%;
+                        margin: 0;
+                        height: 100%;
+                        background-color: rgba(255, 255, 255, 0.658);
+                        border-radius: 15px;
+                        padding: 10px;
+                        font-size: 14px;
+                        max-height: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 6;
+                        -webkit-box-orient: vertical;
+                        white-space: normal;
+                        color: $color-text-dark;
+                        text-align: center;
+                    }
+                }
+                h4 {
+                    margin: 0;
+                    margin-top: 10px;
+                    text-align: center;
+                    font-size: 14px;
+                    color: $color-text;
+                }
+                .smallArticle {
+                    font-size: 10px;
+                    color: $color-text;
+                    height: 40px;
+                    line-height: 16px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        .divAccessArticle {
+            .linkArticles {
+                color: $color-text;
+                text-decoration: none;
+                font-size: 20px;
+                .arrowIcon {
+                    font-size: 36px;
+                    margin-left: 10px;
+                    position: relative;
+                    top: 8px;
+                    transition: transform 0.3s ease-in-out;
+                }
+                &:hover {
+                    .arrowIcon {
+                        transform: translateX(10px);}
+                        transition: transform 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: 900px) {
+    .divActus {
+        height: 800px !important;
+        h3 {
+            margin: 0 !important;
+            line-height: 50px;
+            font-size: 22px !important;
+        }
+    }
+    .divCentralArticle {
+        flex-direction: column !important;
+        padding: 10px !important;
+        .divAccessArticle {
+            margin-top: 20px !important;
+            margin-bottom: 10px !important;
+        }
+        .linkArticles {
+            font-size: 18px !important;
+            .arrowIcon {
+                font-size: 30px !important;
+            }
+        }
+        .listNews {
+            grid-template-columns: repeat(2, 1fr) !important;
+            grid-template-rows: repeat(3, auto) !important;
+            .itemArticle {
+                height: 200px !important;
+                width: 150px !important;
+                .textArticle {
+                    height: 110px !important;
+                }
+                h4 {
+                    font-size: 12px !important;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1050px) {
+    .divCentralArticle {
+        flex-direction: column !important;
+    }
+}

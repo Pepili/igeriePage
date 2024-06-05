@@ -1,0 +1,84 @@
+.divBiographie {
+    margin-bottom:0;
+    padding-bottom: 4em;
+    h4 {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        color: $color-text-dark;
+        height: 100px;
+        line-height: 100px;
+    }
+    .logoPage {
+        height: 280px;
+    }
+    .blockBiographie {
+        display:flex;
+        flex-direction: column;
+        width: 90%;
+        border-radius: 30px;
+        background-color: $color-primary;
+        max-width: 1200px;
+        height: auto;
+        margin: auto;
+        padding: 50px;
+        justify-content: space-around;
+        font-size: 20px;
+    }
+    .textBiographie {
+        color: $color-text;
+        margin-top: 50px;
+        line-height: 25px;
+        text-align: justify;
+    }
+    .firstBlockBiographie {
+        display: flex;
+        flex-direction: row;
+        @media all and (max-width: 900px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .pictureIsaBio {
+        width: 300px;
+        height: 300px;
+        max-width: 400px;
+        max-height: 400px;
+        border-radius:10px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .isabelleTextBio {
+        width: 73%;
+        color: $color-text;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 30px;
+        text-align: justify;
+        @media all and (max-width: 900px) {
+            h3 {
+                margin-top: 30px !important;
+            }
+            padding: 0;
+            align-items: center;
+            width: 100%;
+        }
+        p {
+            line-height: 25px;
+        }
+        h3 {
+            font-weight: bold;
+            margin-bottom: 30px;
+            margin-top: -30px;
+        }
+        .paragrapheClassIsabelle {
+            width: 90%;
+            margin-bottom: 0;
+            @media all and (max-width: 900px) {
+                width: 100%;
+            }
+        }
+    }
+}

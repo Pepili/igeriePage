@@ -1,0 +1,209 @@
+.divContact {
+    height: 3500px;
+    @media all and (max-width: 900px) {
+        height: 3000px;
+    }
+}
+.contactIndex {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    h4 {
+        height: 200px;
+        font-size: 30px;
+        color: $color-text;
+        font-weight: bold;
+    }
+    .profilContact {
+        width: 500px;
+        height: 500px;
+        @media all and (max-width: 900px) {
+            width: 350px;
+            height: 350px;
+        }
+    }
+    .divCoordonnee {
+        display: flex;
+        justify-content: space-between;
+        width: 85%;
+        height: 600px;
+        align-items: center;
+        @media all and (max-width: 900px) {
+            flex-direction: column;
+            height: 500px;
+        }
+        .iconContact {
+            font-size: 35px;
+            color: $color-text-dark;
+        } 
+        .utils {
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            @media all and (max-width: 900px) {
+                height: 200px;
+                margin-top: 100px;
+            }
+            .iconContact {
+                margin-right: 20px;
+                position: relative;
+                top: 5px;
+                width: 50px;
+            }
+            p {
+                font-size: 18px;
+                margin: 0;
+                font-weight: bold;
+                color: $color-text-dark;
+            }
+
+        }
+        .reseau {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 25px;
+            .iconContact {
+                font-size: 40px;
+                transition: transform 0.4s ease;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+        
+    }
+}
+.backgroundDiv {
+    height: 800px;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+.greenContact {
+    background-color: $color-primary;
+    top: 0;
+    @media all and (max-width: 900px) {
+        height: 700px;
+    }
+}
+.redContact {
+    background-color: #851b15a1;
+    bottom: 1500px;
+    @media all and (max-width: 900px) {
+        bottom: 1400px;
+        height: 700px;
+    }
+}
+
+.divMail {
+    position: relative;
+    background-color: $color-primary;
+    width: 70%;
+    height: 720px;
+    border-radius: 10px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    bottom: -1250px;
+    max-width: 880px;
+    min-width: 390px;
+    @media all and (max-width: 900px) {
+        bottom: -1000px;
+    }
+  }
+  
+  .divMail::before,
+  .divMail::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 55%;
+    height: 2px;
+    background-color: #fff;
+  }
+  
+  .divMail::before {
+    left: 0;
+    transform: rotate(25deg); 
+    transform-origin: left top;
+  }
+  
+  .divMail::after {
+    right: 0;
+    transform: rotate(-25deg); 
+    transform-origin: right top; 
+  }
+.contactForm {
+    background-color: inherit;
+    height: 100% !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    justify-content: end;
+    min-width: 350px;
+    .champsId {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        .champContact {
+            width: 40%;
+            @media all and (max-width: 900px) {
+                width: 45%;
+            }
+        }
+        input {
+            width: 100%;
+        }
+    }
+    .champContact {
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+        input {
+            border-radius: 15px;
+            border: none;
+            height: 45px;
+            padding: 10px;
+            background-color: $color-background;
+        }
+    }
+    .messageContact {
+        textarea {
+            height: 200px;
+            resize: none;
+            border-radius: 20px;
+            padding: 10px;
+            background-color: $color-background;
+        }
+    }
+    .submitMail {
+        width: 200px;
+        height: 40px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 10px;
+        color: $color-text-dark;
+        background-color: $color-background;
+    }
+}
+.contactTitle {
+    color: $color-text-dark;
+    text-align: center;
+    position: relative;
+    font-size: 28px;
+    font-weight: bold;
+    bottom: -1200px;
+    @media all and (max-width: 900px) {
+        bottom: -950px;
+    }
+}

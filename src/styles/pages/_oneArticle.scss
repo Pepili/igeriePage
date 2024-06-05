@@ -1,0 +1,132 @@
+.divOneArticle {
+    background-color: $color-primary;
+    width: 90%;
+    margin: auto;
+    height: auto;
+    border-radius: 20px;
+    padding: 50px;
+    margin-bottom: 100px ;
+    margin-top: 150px;
+    max-width: 1800px;
+    position: relative;
+    @media all and (max-width: 1000px) {
+        width: 95%;
+        padding: 30px;
+    }
+    h1 {
+        text-align: center;
+        font-size: 26px;
+        color: $color-text;
+        height: 100px;
+        line-height: 100px;
+    }
+    .iconReturn {
+        font-size: 36px;
+        color: $color-text;
+        position: absolute;
+        top: 60px;
+        cursor: pointer;
+    }
+    .themDate {
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        color: $color-text;
+        font-size: 18px;
+        margin-left: 100px;
+        @media all and (max-width: 1000px) {
+            margin: 0;
+            align-items: center;
+        }
+    }
+    .articleImage {
+        min-height: 600px;
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(255, 255, 255, 0.13);
+        border-radius: 20px;
+        @media all and (max-width: 1000px) {
+            flex-direction: column;
+            width: 100%;
+            padding: 20px;
+            min-height: inherit;
+        }
+        .imageArticle {
+            min-height: 100%;
+            width: 40%;
+            border-radius: 20px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            @media all and (max-width: 1000px) {
+                width: 100%;;
+                min-height: inherit;
+                height: 400px;
+            }
+        }
+        .textArticle {
+            width: 60%;
+            padding: 60px;
+            color: $color-text;
+            font-size: 20px;
+            @media all and (max-width: 1000px) {
+                width: 100%;
+                text-align: justify;
+                padding: 0;
+                padding-top: 50px;
+            }
+            p {
+                width: 100%;
+                margin: 0;
+                
+            }
+            .text {
+                line-height: 26px;
+                letter-spacing: 0.5px;
+            }
+            .quote, .source {
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+        }
+    }
+    .article {
+        background-color: rgba(255, 255, 255, 0.13);
+        border-radius: 20px;
+        color: $color-text;
+        padding: 50px;
+        font-size: 20px;
+        @media all and (max-width: 1000px) {
+            padding: 20px;
+        }
+        .text {
+            line-height: 28px;
+            letter-spacing: 0.5px;
+            text-align: justify;
+        }
+        .quote, .source {
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+    }
+    .articleJustImage {
+        display: flex;
+        flex-direction: column;
+        .imageArticle {
+            border-radius: 20px;
+        }
+        .quote, .source {
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: $color-text;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .source {
+            text-align: left !important;
+        }
+    }
+}
+.oneAnnexe {
+    background-color: $color-text-dark;
+}

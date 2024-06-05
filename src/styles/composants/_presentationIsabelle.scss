@@ -1,0 +1,101 @@
+.divPresentationIsabelle{
+    height: 950px;
+    margin-bottom:0;
+    padding-bottom: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3 {
+        text-align: center;
+        font-size: 26px;
+        color: $color-text-dark;
+        font-weight: bold;
+        height: 50px;
+    }
+    .blockPresentation {
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        width: 90%;
+        border-radius: 30px;
+        background-color: $color-primary;
+        max-width: 1200px;
+    }
+    .pictureIsa {
+        width: 36vw;
+        height: 42vh;
+        max-width: 400px;
+        max-height: 400px;
+        border-radius:30px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left: 30px;
+    }
+    .isabelleText {
+        text-align: justify;
+        width: 64%;
+        padding: 40px 0;
+        color: $color-text;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        .paragrapheClassIsabelle {
+            width: 90%;
+            margin-bottom: 0;
+        }
+        .importCitation {
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            height: 60px;
+        }
+    }
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+        height: auto;
+        padding-left:0;
+        padding:30px 0;
+        img {
+            width: 200px;
+            height:200px;
+        }
+    }
+}
+@media screen and (max-width: 900px) {
+    .blockPresentation {
+        flex-direction: column !important;
+    }
+    .isabelleText {
+        width: 95% !important;
+    }
+    .pictureIsa {
+        width: 350px !important;
+        height: 350px !important;
+        margin-top: 30px;
+    }
+    .linkPresentation {
+        text-align: center;
+    }
+    .divPresentationIsabelle {
+        padding: 90px 0 !important;
+    }
+}
+.linkPresentation {
+    color: $color-text;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+    display: block;
+    margin-top: 15px;
+}
+.arrowIcon {
+    transition: transform 0.3s ease-in-out;
+  }
+.linkPresentation:hover .arrowIcon {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(10px); /* Ajustez cette valeur pour contrôler la distance de glissement */
+}

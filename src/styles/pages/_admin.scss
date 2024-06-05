@@ -1,0 +1,416 @@
+.divConnexionAdmin {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    img {
+        width: 100px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #4b0f0ba9;
+        width: 430px;
+        height: 50vh;
+        justify-content: center;
+        border-radius: 20px;
+        div {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            label {
+                margin-bottom: 5px;
+                font-size: 18px;
+                color: $color-text;
+            }
+            input {
+                padding: 10px ;
+                border-radius: 10px;
+                background-color: $color-text;
+                width: 300px;
+                border: none;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+        button {
+            width: 300px;
+            height: 50px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 10px;
+            color: $color-text;
+            background-color: $color-secondary;
+        }
+    }
+}
+.iconExit {
+    font-size: 50px;
+    color: $color-secondary;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+.viewTab {
+    width: 100%;
+}
+.tabs{
+    margin:0 auto;
+    width:70%;
+    text-align:center;
+    margin-top:15vh;
+  }
+  
+  .tab-buttons{
+    margin-bottom:50px;
+    width: 100%;
+    display: flex;
+    background-color: $color-secondary;
+    button{
+        font-size:20px;
+        background:transparent;
+        width: 50%;
+        border:none;
+        outline:none;
+        padding:10px 20px ;
+        cursor:pointer;
+        color:$color-text;
+        transition:all ease-in-out .2s;
+        border-bottom:2px solid transparent;
+        @media all and (max-width: 600px) {
+            font-size: 16px;
+        }
+        
+    }
+    .active{
+        border-bottom:2px solid $color-text;
+        color:$color-text;
+        background-color: darken($color: $color-secondary, $amount: 10);
+    }
+  }
+  .tab-content {
+    display: flex;
+    justify-content: center;
+  }
+
+
+.AdminDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color-text;
+    font-size: 18px;
+    min-height: 100vh;
+    img {
+        width: 100px;
+    }
+    form {
+        width: 90%;
+        max-width: 700px;
+        background-color: #4b0f0ba9;
+        border-radius: 20px;
+        padding: 30px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+        .form__radio-input {
+            display: none;
+          }
+          
+          .form__radio-label {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            font-weight: normal !important;
+            font-size: 18px !important;
+          }
+          
+          .form__radio-button {
+            height: 1.6rem;
+            width: 1.6rem;
+            border: 3px solid $color-text-dark;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            transform: translateY(-2px);
+            margin-top: 4px;
+          }
+          
+          .form__radio-button::after {
+            content: "";
+            display: block;
+            height: 1rem;
+            width: 1rem;
+            position: absolute;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transition: opacity 0.1s;
+            transform: translate(-50%, -50%);
+            background-color: $color-secondary;
+            opacity: 0;
+          }
+          
+          .form__radio-input:checked + .form__radio-label .form__radio-button::after {
+            opacity: 1;
+          }
+        .champDiv {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin-bottom: 20px;
+            label, .labelImage {
+                font-size: 19px;
+                font-weight: bold;
+            }
+            .labelImage {
+                margin: 0;
+            }
+        }
+        .inputText {
+            padding: 5px ;
+            border-radius: 10px;
+            background-color: $color-text;
+            border: none;
+            &:focus {
+                outline: none;
+            }
+        }
+        textarea {
+            color: $color-text-dark;
+            letter-spacing: 1px;
+            line-height: 1.5;
+        }
+        select {
+            padding: 5px ;
+            border-radius: 10px;
+            background-color: $color-text;
+            border: none;
+            cursor: pointer;
+            option {
+                cursor: pointer !important;
+                &:hover {
+                    background-color: darken($color: $color-text, $amount: 10) !important;
+                }
+            }
+        }
+        .submitArticle {
+            background-color: $color-text-dark;
+            color: $color-text;
+            border: none;
+            padding: 10px;
+            width: 60%;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+    }
+    .listSousTheme {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 10px;
+        .textSoustheme {
+            background-color:  $color-text-dark;
+            border-radius: 10px;
+            display: flex;
+            padding: 5px 10px;
+            p {
+                margin: 0;
+            }
+            button {
+                background-color: inherit;
+                border: none;
+                color: $color-text;
+                margin-left: 15px;
+                height: auto;
+            }
+        }
+    }
+    .radioType {
+        display: flex;
+        justify-content: center;        
+    }
+    .annexeRadio {
+        margin-left: 40px;
+    }
+    .divSoustheme {
+        width: 100%;
+        display: flex;
+    }
+    .sousTheme {
+        flex: 1;
+        border-radius: 10px 0 0 10px !important;
+    }
+    .buttonAdd {
+       flex: 0.1;
+       border-radius: 0 10px 10px 0 !important;
+       border: none;
+       border-left: 1px solid $color-text-dark;
+       background-color: $color-text;
+    }
+
+}
+.file-input-container{
+    display:flex;
+    margin:2px;
+    border-radius: 10px;
+  }
+  .sm-input-file{
+      border: 1px solid #333;
+      background: #ccc;
+      color: #777;
+      width: 82px;
+      opacity:0;
+  }
+  #sm-ip-1 {
+    position: absolute;
+  }
+  .for-sm-input-file{
+      width: 20%;
+      height: 50px;
+      background-color: $color-text;
+      padding: 6px;
+      font-size: 16px !important;
+      cursor: pointer;
+      z-index: 30;
+      text-align: center;
+      color:$color-text-dark;
+      padding-top:10px;
+      border-radius: 10px 0 0 10px;
+      min-width: 80px;
+      line-height: 30px;
+  }
+  .for-sm-input-file:hover{
+    background: darken($color: $color-text, $amount: 10);
+  }
+  .span-text{
+      display: inline-flex;
+      padding: 12px;
+      border: 1px solid $color-text;
+      border-radius: 0 10px 10px 0;
+      height: 50px;
+      background: inherit;
+      color: $color-text;
+      min-width: 100px;
+      font-size: 14px;
+      width: 80%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 5rem;
+  }
+  
+  table {
+    border-spacing: 0;
+    border: 1px solid $color-text-dark;
+  }
+  
+  tr:last-child td {
+    border-bottom: 0;
+  }
+  
+  th,
+  td {
+    margin: 0;
+    padding: 0.5rem;
+    border:1px solid $color-text-dark;
+    width: 14.3%;
+    @media all and (max-width: 780px) {
+        width: 20%;
+    }
+    text-align: center !important;
+    font-size: 14px;
+    border-bottom: 1px solid #d1cccc;
+    border-right: 1px solid $color-text-dark !important;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: pre-line;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  th {
+    font-size: 16px;
+    height: 50px;
+    line-height: 30px;
+    @media all and (max-width: 780px) {
+      font-size: 12px;
+  }
+  }
+  td {
+    border-bottom: 1px solid $color-text-dark !important;
+    border-right: 1px solid $color-text-dark !important;
+    height: 80px !important;
+  }
+  thead tr {
+    background-color: $color-primary !important;
+    color: $color-text !important;
+  }
+  tbody {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    max-height: 800px !important;
+    overflow-y: scroll;
+    &::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #00000000;
+    }
+
+    &::-webkit-scrollbar
+    {
+        width: 3px;
+        background-color: $color-text;
+        border-radius:5px;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+        background-color: $color-text-dark;
+        border-radius: 5px;
+
+    }
+  }
+  th:last-child,
+  td:last-child {
+    border-right: 0;
+  }
+  
+  tr:nth-child(odd) {
+    background: #67705038;
+    color: $color-text-dark;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  tr:nth-child(even) {
+    background: #67705071;
+    color: $color-text-dark;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  th.desc {
+    border-bottom: 5px solid $color-text-dark;
+  }
+  
+  th.asc {
+    border-top: 5px solid $color-secondary;
+  }
+  
