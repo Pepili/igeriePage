@@ -1,8 +1,7 @@
-import React, {useState, useEffect, useMemo} from 'react';
+import React, {useMemo} from 'react';
 import { useTable, useSortBy } from 'react-table';
 import UseRows from "./UseRows";
 import UseColumns from "./UseColumns";
-import { useNavigate } from 'react-router-dom';
 
 function ListArticles() {
 
@@ -10,7 +9,6 @@ function ListArticles() {
   const data = UseRows();
   const memoizedData = useMemo(() => data, [data]);
   const table = useTable({ columns, data: memoizedData }, useSortBy);
-  const navigate = useNavigate();
 
   const {
     getTableProps,

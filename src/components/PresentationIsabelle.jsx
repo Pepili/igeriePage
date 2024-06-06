@@ -10,30 +10,32 @@ function PresentationIsabelle() {
   const h3Ref = useRef(null);
 
   useEffect(() => {
-    gsap.fromTo(
-      h3Ref.current,
-      { x: '100%', opacity: 0 },
-      {
-        x: '0%',
-        opacity: 1,
-        duration: 1,
-        scrollTrigger: {
-          trigger: h3Ref.current,
-          start: "top 70%",
-          end: "top 50%",    
-          scrub: 1,
-          markers: false,
-          pin: false,
+    if (window.innerWidth > 900) {
+      gsap.fromTo(
+        h3Ref.current,
+        { x: '100%', opacity: 0 },
+        {
+          x: '0%',
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: h3Ref.current,
+            start: "top 70%",
+            end: "top 50%",    
+            scrub: 1,
+            markers: false,
+            pin: false,
+          }
         }
-      }
-    );
+      );
+    }
   }, []);
 
   return (
       <div className='divPresentationIsabelle'>
         <h3 ref={h3Ref}>Qui suis-je ?</h3>
         <div className='blockPresentation'>
-          <div style={{ backgroundImage: `url(/img/profil.jpg)` }} className='pictureIsa'></div>
+          <div style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/img/profil.jpg)` }} className='pictureIsa'></div>
           <div className='isabelleText'>
               <p className='paragrapheClassIsabelle'>
                   Je suis Isabelle, créatrice d’Igérie, une conception du monde élaborée à partir de mes expériences personnelles et professionnelles, de mes recherches, formations et expérimentations. Je n’ai pas inventé grand-chose. Le concept de vie Igérie est le résultat d’un assemblage multi théoriques et apprentissages de vie qui est en perpétuelle évolution.<br/><br/>

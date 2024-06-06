@@ -7,40 +7,42 @@ gsap.registerPlugin(ScrollTrigger);
 
 function PresentationServices() {
   useEffect(() => {
-    gsap.fromTo(
-      ".titleFree h2",
-      { x: '100%', opacity: 0 },
-      {
-        x: '0%',
-        opacity: 1,
-        duration: 1,
-        scrollTrigger: {
-          trigger: ".titleFree",
-          start: "top 70%",
-          end: "top 50%",    
-          scrub: 1,
-          markers: false,
-          pin: false,
-        }
-      }
-    );
-    gsap.fromTo(
-      ".titleNoFree h2",
-      { x: '-100%', opacity: 0 },
-      {
-        x: '0%',
-        opacity: 1,
-        duration: 1,
-        scrollTrigger: {
-          trigger: ".titleNoFree",
-          start: "top 70%",
-          end: "top 50%",    
-          scrub: 1,
-          markers: false,
-          pin: false,
-        }
-      }
-    );
+    if (window.innerWidth > 900) {
+        gsap.fromTo(
+          ".titleFree h2",
+          { x: '100%', opacity: 0 },
+          {
+            x: '0%',
+            opacity: 1,
+            duration: 1,
+            scrollTrigger: {
+              trigger: ".titleFree",
+              start: "top 70%",
+              end: "top 50%",    
+              scrub: 1,
+              markers: false,
+              pin: false,
+            }
+          }
+        );
+        gsap.fromTo(
+          ".titleNoFree h2",
+          { x: '-100%', opacity: 0 },
+          {
+            x: '0%',
+            opacity: 1,
+            duration: 1,
+            scrollTrigger: {
+              trigger: ".titleNoFree",
+              start: "top 70%",
+              end: "top 50%",    
+              scrub: 1,
+              markers: false,
+              pin: false,
+            }
+          }
+        );
+    }
   }, []);
 
   return (
@@ -52,7 +54,7 @@ function PresentationServices() {
               </div>
               <div className='lineDiv'></div>
                 <div className='listFree'>
-                  <div style={{ backgroundImage: `url(/img/freeService.jpg)` }} className='imgService'></div>
+                  <div style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/img/freeService.jpg)` }} className='imgService'></div>
                     <div className='listUl'>
                       <ul>
                         <li>Des podcasts</li>

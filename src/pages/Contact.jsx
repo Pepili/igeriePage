@@ -69,7 +69,7 @@ function Contact() {
         <div className='redContact backgroundDiv'></div>
         <div className='contactIndex'>
           <h4>Contact</h4>
-          <img src='/img/profil.jpg' alt='isabelle' className='profilContact'/>
+          <img src={ process.env.PUBLIC_URL +'/img/profil.jpg'} alt='isabelle' className='profilContact'/>
           <div className='divCoordonnee'>
             <div className='utils'>
               <p><FontAwesomeIcon icon={faPhone} className='iconContact'/>06.03.59.50.17</p>

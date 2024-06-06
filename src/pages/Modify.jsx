@@ -52,7 +52,6 @@ function Modify({ verifyToken }) {
   const token = sessionStorage.getItem("token");
   const { id, type } = useParams();
   const [errorMessage, setErrorMessage] = useState('');
-  const [element, setElement] = useState({});
   const { enqueueSnackbar } = useSnackbar();
 
   const [title, setTitle] = useState('');
@@ -127,7 +126,6 @@ function Modify({ verifyToken }) {
       }
 
       const element = data[0];
-      setElement(element);
       setTitle(element.titre);
       setOriginalTitle(element.titre);
       setImage(element.media);
@@ -370,7 +368,7 @@ function Modify({ verifyToken }) {
     <div className="divModify">
       <div className='headerModify'>
         <FontAwesomeIcon icon={faArrowLeft} className='iconReturn' onClick={handleReturn} />
-        <img src='/img/logo1.png' alt='logo' />
+        <img src={ process.env.PUBLIC_URL +'/img/logo1.png'} alt='logo' />
       </div>
       <Tabs>
         <Tab label="Texte">

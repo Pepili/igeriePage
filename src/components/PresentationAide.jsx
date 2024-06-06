@@ -6,6 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function PresentationAide() {
     useEffect(() => {
+      if (window.innerWidth > 900) {
         gsap.fromTo(
           ".titleHelp h2",
           { x: '-100%', opacity: 0 },
@@ -23,7 +24,8 @@ function PresentationAide() {
             }
           }
         );
-      }, []);
+      }
+    }, []);
   return (
     <div className="divAide">
         <div className='divPresentationAide'>

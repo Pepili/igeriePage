@@ -5,7 +5,7 @@ function Logo() {
   return (
     <div>
         <div className='logo'>
-        <Link to="/"><img alt="logo" src="/img/logo1.png" className="imglogo"/></Link>
+        <Link to="/"><img alt="logo" src= { process.env.PUBLIC_URL + "/img/logo1.png"} className="imglogo"/></Link>
         <p>Igerie coaching de vie</p>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -15,7 +15,7 @@ function Biographie() {
       <h4>Qui suis-je ?</h4>
       <div className='blockBiographie'>
           <div className='firstBlockBiographie'>
-            <div style={{ backgroundImage: `url(/img/profil.jpg)` }} className='pictureIsaBio'></div>
+            <div style={{ backgroundImage: `url(${ process.env.PUBLIC_URL}/img/profil.jpg)` }} className='pictureIsaBio'></div>
             <div className='isabelleTextBio'>
                 <h3>Isabelle Genest</h3>
                 <p className='paragrapheClassIsabelle'>

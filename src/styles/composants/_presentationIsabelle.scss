@@ -46,12 +46,20 @@
         .paragrapheClassIsabelle {
             width: 90%;
             margin-bottom: 0;
+            @media all and (max-width: 900px) {
+                width: 95% !important;
+                text-align: center !important;
+            }
         }
         .importCitation {
             display: block;
             text-align: center;
             font-weight: bold;
             height: 60px;
+            @media all and (max-width: 900px) {
+                margin-top: 20px;
+                margin-bottom: 40px;
+            }
         }
     }
     @media screen and (max-width: 900px) {
@@ -71,11 +79,13 @@
     }
     .isabelleText {
         width: 95% !important;
+        font-size: 18px !important;
     }
     .pictureIsa {
         width: 350px !important;
         height: 350px !important;
         margin-top: 30px;
+        margin-left: 0 !important;
     }
     .linkPresentation {
         text-align: center;

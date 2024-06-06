@@ -85,7 +85,7 @@ function ConnexionAdmin() {
   return (
     <div className="divConnexionAdmin">
       <div style={{height: "300px", display: "flex", alignItems: "center"}}>
-        <img src='/img/logo1.png' alt='logo'/>
+        <img src={ process.env.PUBLIC_URL +'/img/logo1.png'} alt='logo'/>
       </div>
       <form>
         <div>

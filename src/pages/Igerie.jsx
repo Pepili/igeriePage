@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 function Igerie() {
   useEffect(() => {
@@ -63,7 +62,7 @@ function Igerie() {
   return (
     <div className="divIgerie">
       <div className='logo logoPage'>
-        <Link to="/"><img alt="logo" src="/img/logo1.png" className="imglogo"/></Link>
+        <Link to="/"><img alt="logo" src={ process.env.PUBLIC_URL +"/img/logo1.png"} className="imglogo"/></Link>
         <p>Igerie coaching de vie</p>
       </div>
       <h4>Qu'est ce qu'Igérie ?</h4>

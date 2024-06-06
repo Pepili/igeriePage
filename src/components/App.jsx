@@ -75,7 +75,7 @@ function App() {
             <Route path="/roue" element={<><Header /><Roue /><Footer /></>} />
             {/* <Route path="/services" element={<><Header /><Services /><Footer /></>} /> */}
             <Route path="/contact" element={<><Header /><Contact /><Footer /></>} />
-            <Route path="/connexionAdmin" element={<ConnexionAdmin />}/>
+            <Route path="/connexionAdmin" element={<><ConnexionAdmin /></>}/>
             <Route path="/admin" element={<Admin verifyToken={(id, token, navigate) => verifyToken(id, token, navigate)}/>}/>
             <Route path='/modify/:id/:type' element= {<Modify verifyToken={(id, token, navigate) => verifyToken(id, token, navigate)}/>}/>
             <Route path='/oneArticle/:id' element={<><Header /><OneArticle /><Footer /></>}></Route>

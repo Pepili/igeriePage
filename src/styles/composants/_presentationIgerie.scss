@@ -25,6 +25,12 @@
       padding: 20px;
       line-height: 20px;
       font-size: 18px;
+      ul {
+        padding: 0;
+      }
+      @media all and (max-width: 900px) {
+        font-size: 16px !important;
+      }
   
       h2 {
         font-size: 20px;
@@ -110,6 +116,8 @@
   
     .titleSlide {
       width: 95%;
+      padding: 0;
+      margin-bottom: 24px;
     }
   
     .lineDiv {

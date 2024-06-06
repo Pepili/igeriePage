@@ -71,7 +71,7 @@ const handleAccueil = async () => {
    <div className='AdminDiv'>
     <FontAwesomeIcon icon={faArrowRightFromBracket} className='iconExit' onClick={handleAccueil}/>
     <div style={{height: "200px", display:"flex", alignItems: "center"}}>
-      <img src='/img/logo1.png' alt='logo'/>
+      <img src={ process.env.PUBLIC_URL + '/img/logo1.png'} alt='logo'/>
     </div>
     <Tabs>
       <Tab label="Création">

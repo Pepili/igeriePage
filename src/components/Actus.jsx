@@ -26,11 +26,6 @@ function Actus() {
     const fetchArticles = async () => {
       try {
         const response = await fetch(process.env.REACT_APP_API_URL + 'articles/home');
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        } else if (!response.headers.get("content-type")?.includes("application/json")) {
-          throw new Error("The response is not a valid JSON.");
-        }
         const data = await response.json();
           if (data.error) {
             switch (data.errorCode) {
@@ -58,6 +53,7 @@ function Actus() {
     };
     fetchArticles();
 
+  if (window.innerWidth > 900) {
     gsap.fromTo(
       ".titleActu h3",
       { x: '-100%', opacity: 0 },
@@ -75,6 +71,7 @@ function Actus() {
         }
       }
     );
+  }
 
   }, []);
 

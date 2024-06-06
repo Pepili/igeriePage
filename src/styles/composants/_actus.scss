@@ -103,7 +103,8 @@
 }
 @media all and (max-width: 900px) {
     .divActus {
-        height: 800px !important;
+        height: auto !important;
+        padding: 40px 0 !important;
         h3 {
             margin: 0 !important;
             line-height: 50px;

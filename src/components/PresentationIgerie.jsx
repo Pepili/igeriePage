@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const carouselItems = [
   {
-    image: "/img/chemin.png",
+    image: process.env.PUBLIC_URL + "/img/chemin.png",
     header: '...de sens à ta vie',
     list: [
       '"Tu as tout pour être heureux(se)" mais tu ne te sens pas épanoui(e)',
@@ -21,7 +21,7 @@ const carouselItems = [
     ]
   },
   {
-    image: "/img/perdu.png",
+    image: process.env.PUBLIC_URL + "/img/perdu.png",
     header: '...de solutions pour sortir de situations bloquées ou répétitives',
     list: [
       "Tu t’épuises à devoir sans cesse réagir et faire face à de nouvelles difficultés.",
@@ -32,7 +32,7 @@ const carouselItems = [
     ]
   },
   {
-    image: "/img/developpement.png",
+    image: process.env.PUBLIC_URL +"/img/developpement.png",
     header: '...de développement personnel',
     list: [
       "Tu as envie de découvrir qui tu es vraiment, ton plein potentiel.",
@@ -87,23 +87,25 @@ const settings = {
 
 const PresentationIgerie = () => {
   useEffect(() => {
-    gsap.fromTo(
-      ".titleSlide h2",
-      { x: '100%', opacity: 0 },
-      {
-        x: '0%',
-        opacity: 1,
-        duration: 1,
-        scrollTrigger: {
-          trigger: ".titleSlide",
-          start: "top 70%",
-          end: "top 50%",    
-          scrub: 1,
-          markers: false,
-          pin: false,
+    if (window.innerWidth > 900) {
+      gsap.fromTo(
+        ".titleSlide h2",
+        { x: '100%', opacity: 0 },
+        {
+          x: '0%',
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: ".titleSlide",
+            start: "top 70%",
+            end: "top 50%",    
+            scrub: 1,
+            markers: false,
+            pin: false,
+          }
         }
-      }
-    );
+      );
+    }
   }, []);
 
   return (

@@ -106,7 +106,7 @@ function Header() {
               </Link>
               <Link to="/roue" onClick={() => handleLinkClick('/roue')} className={location.pathname === '/roue' ? 'active' : ''}>
                 <li>
-                    <img src="/img/wheel-of-fortune.png" alt="jeu de l'épanouissement" />
+                    <img src= {process.env.PUBLIC_URL + "/img/wheel-of-fortune.png"} alt="jeu de l'épanouissement" />
                 </li>
               </Link>
           </ul>

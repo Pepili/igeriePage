@@ -24,12 +24,20 @@
         padding: 50px;
         justify-content: space-around;
         font-size: 20px;
+        @media all and (max-width: 900px) {
+            font-size: 18px !important;
+            width: 95% !important;
+            padding: 20px;
+          }
     }
     .textBiographie {
         color: $color-text;
         margin-top: 50px;
         line-height: 25px;
         text-align: justify;
+        @media all and (max-width: 900px) {
+            text-align: center;
+          }
     }
     .firstBlockBiographie {
         display: flex;
@@ -64,6 +72,7 @@
             padding: 0;
             align-items: center;
             width: 100%;
+            text-align: center;
         }
         p {
             line-height: 25px;

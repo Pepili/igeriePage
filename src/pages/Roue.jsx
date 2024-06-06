@@ -6,17 +6,30 @@ const Roue = () => {
   const { enqueueSnackbar } = useSnackbar();
   const [articles, setArticles] = useState([]);
   const [thematique, setThematique] = useState([]);
-  const radius = 90; // PIXELS
   const [rotate, setRotate] = useState(0); // DEGREES
   const [easeOut, setEaseOut] = useState(0); // SECONDS
   const [angle, setAngle] = useState(0); // RADIANS
   const [top, setTop] = useState(null); // INDEX
   const [offset, setOffset] = useState(null); // RADIANS
-  const [net, setNet] = useState(null); // RADIANS
-  const [result, setResult] = useState(null); // INDEX
-  const [spinning, setSpinning] = useState(false);
   const colors = ["#677050", "#851A15", "#4B0F0B"];
   const [resultArticle, setResultArticle] = useState(null);
+
+  const [radius, setRadius] = useState(window.innerWidth < 680 ? 130 : 130);
+  const [textRadius, setTextRadius] = useState(window.innerWidth < 680 ? 150 : 150);
+
+  useEffect(() => {
+  const handleResize = () => {
+    setRadius(window.innerWidth < 680 ? 130 : 90);
+    setTextRadius(window.innerWidth < 680 ? 100 : 150); // Mettez à jour textRadius en fonction de la taille de l'écran
+  };
+  console.log(radius)
+  window.addEventListener('resize', handleResize);
+
+  // Nettoyer l'écouteur d'événement lors du démontage du composant
+  return () => {
+    window.removeEventListener('resize', handleResize);
+  };
+  }, []); // Exécuter une fois au montage du composant
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -109,7 +122,6 @@ const Roue = () => {
     let endAngle = start + arc;
     let angle = index * arc;
     let baseSize = radius * 3.33;
-    let textRadius = baseSize - 200;
 
     ctx.beginPath();
     ctx.arc(x, y, radius, startAngle, endAngle, false);
@@ -122,8 +134,8 @@ const Roue = () => {
 
     ctx.save();
     ctx.translate(
-      baseSize + Math.cos(angle - arc / 2) * textRadius,
-      baseSize + Math.sin(angle - arc / 2) * textRadius
+      baseSize + Math.cos(angle - arc / 2) * textRadius -120,
+      baseSize + Math.sin(angle - arc / 2) * textRadius -120
     );
     ctx.rotate(angle - arc / 2 + Math.PI / 2);
     ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
@@ -140,7 +152,6 @@ const Roue = () => {
     let randomSpin = Math.floor(Math.random() * 900) + 500;
     setRotate(prevRotate => prevRotate + randomSpin); // Ajoutez la rotation actuelle à la nouvelle rotation
     setEaseOut(2);
-    setSpinning(true);
 
     // calculate result after wheel stops spinning
     setTimeout(() => {
@@ -165,10 +176,6 @@ const Roue = () => {
     } else {
       result = thematique.length + count;
     }
-
-    // set state variable to display result
-    setNet(netRotation);
-    setResult(result % thematique.length);
 
     // get a random article with the selected theme
     getRandomArticle(thematique[result % thematique.length]);

@@ -46,6 +46,7 @@ html, body {
 }
 
 header {
+  box-sizing: border-box;
   height: 100px;
   width: 100%;
   display: flex;
@@ -213,10 +214,16 @@ footer {
   bottom: 0;
   left: 0;
   background-color: #4B0F0B;
-  height: 230px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media all and (max-width: 900px) {
+  footer {
+    height: 330px;
+    justify-content: space-between;
+  }
 }
 footer img {
   width: 60px;
@@ -227,6 +234,11 @@ footer .linkElements {
   width: 90%;
   display: flex;
   justify-content: space-between;
+}
+@media all and (max-width: 900px) {
+  footer .linkElements {
+    flex-direction: column-reverse;
+  }
 }
 footer .listSocial {
   text-align: center;
@@ -243,8 +255,21 @@ footer .listSocial ul a {
   cursor: pointer;
   font-size: 32px;
 }
+@media all and (max-width: 900px) {
+  footer .listInfo {
+    padding-bottom: 40px;
+  }
+}
 footer .listInfo ul {
   margin-bottom: 0;
+}
+@media all and (max-width: 900px) {
+  footer .listInfo ul {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    justify-content: space-between;
+  }
 }
 footer .listInfo li {
   padding-bottom: 10px;
@@ -304,6 +329,14 @@ footer .listInfo li a {
   padding: 20px;
   line-height: 20px;
   font-size: 18px;
+}
+.slider-container .overlay ul {
+  padding: 0;
+}
+@media all and (max-width: 900px) {
+  .slider-container .overlay {
+    font-size: 16px !important;
+  }
 }
 .slider-container .overlay h2 {
   font-size: 20px;
@@ -382,6 +415,8 @@ footer .listInfo li a {
   }
   .titleSlide {
     width: 95%;
+    padding: 0;
+    margin-bottom: 24px;
   }
   .lineDiv {
     display: none;
@@ -418,8 +453,13 @@ footer .listInfo li a {
   font-size: 20px;
   color: #F6EBE2;
 }
+@media all and (max-width: 900px) {
+  .divPresentationAide .listHelp {
+    font-size: 18px !important;
+  }
+}
 .divPresentationAide .listHelp ul {
-  width: 90%;
+  width: 95%;
   margin: auto;
 }
 .divPresentationAide .listHelp li {
@@ -451,9 +491,19 @@ footer .listInfo li a {
   }
   .divPresentationAide {
     flex-direction: column-reverse;
+    width: 90% !important;
   }
   .divPresentationAide .listHelp, .divPresentationAide .titleHelp {
-    width: 95%;
+    width: 100%;
+  }
+  .titleHelp {
+    padding: 0 !important;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .titleHelp h2 {
+    width: 100%;
+    text-align: center;
   }
   .titleEthique {
     width: 95% !important;
@@ -465,7 +515,7 @@ footer .listInfo li a {
     width: 95% !important;
   }
   .blockIgerieQuoi .listQuoi {
-    width: 95% !important;
+    width: 100% !important;
   }
 }
 .divPresentationIsabelle {
@@ -519,11 +569,23 @@ footer .listInfo li a {
   width: 90%;
   margin-bottom: 0;
 }
+@media all and (max-width: 900px) {
+  .divPresentationIsabelle .isabelleText .paragrapheClassIsabelle {
+    width: 95% !important;
+    text-align: center !important;
+  }
+}
 .divPresentationIsabelle .isabelleText .importCitation {
   display: block;
   text-align: center;
   font-weight: bold;
   height: 60px;
+}
+@media all and (max-width: 900px) {
+  .divPresentationIsabelle .isabelleText .importCitation {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
 }
 @media screen and (max-width: 900px) {
   .divPresentationIsabelle {
@@ -544,11 +606,13 @@ footer .listInfo li a {
   }
   .isabelleText {
     width: 95% !important;
+    font-size: 18px !important;
   }
   .pictureIsa {
     width: 350px !important;
     height: 350px !important;
     margin-top: 30px;
+    margin-left: 0 !important;
   }
   .linkPresentation {
     text-align: center;
@@ -601,6 +665,13 @@ footer .listInfo li a {
   justify-content: right;
   padding-right: 40px;
 }
+@media all and (max-width: 900px) {
+  .divServices .free .titleFree {
+    justify-content: center;
+    padding-right: 0 !important;
+    margin-bottom: 20px;
+  }
+}
 .divServices .free .titleFree h2 {
   font-size: 26px;
   color: #4B0F0B;
@@ -634,6 +705,9 @@ footer .listInfo li a {
   flex-direction: column;
   justify-content: center;
 }
+.divServices .free .listFree ul {
+  padding: 0;
+}
 .divServices .free .listFree li {
   margin: auto;
   margin-bottom: 5px;
@@ -666,9 +740,15 @@ footer .listInfo li a {
   line-height: 24px;
   font-size: 20px;
 }
+@media all and (max-width: 900px) {
+  .divServices .noFree .listNoFree {
+    font-size: 18px !important;
+  }
+}
 .divServices .noFree .listNoFree ul {
   width: 90%;
   margin: auto;
+  padding: 0;
 }
 .divServices .noFree .listNoFree li {
   list-style-type: disc;
@@ -699,6 +779,13 @@ footer .listInfo li a {
   overflow: hidden;
   padding-left: 40px;
 }
+@media all and (max-width: 900px) {
+  .divServices .noFree .titleNoFree {
+    justify-content: center;
+    padding-left: 0 !important;
+    margin-bottom: 20px;
+  }
+}
 .divServices .noFree .titleNoFree h2 {
   font-size: 26px;
   color: #4B0F0B;
@@ -717,6 +804,7 @@ footer .listInfo li a {
   }
   .free .listFree {
     margin-top: 0 !important;
+    font-size: 18px !important;
   }
   .noFree {
     flex-direction: column-reverse;
@@ -835,7 +923,8 @@ footer .listInfo li a {
 
 @media all and (max-width: 900px) {
   .divActus {
-    height: 800px !important;
+    height: auto !important;
+    padding: 40px 0 !important;
   }
   .divActus h3 {
     margin: 0 !important;
@@ -1547,11 +1636,23 @@ form .modifyArticle {
   justify-content: space-around;
   font-size: 20px;
 }
+@media all and (max-width: 900px) {
+  .divBiographie .blockBiographie {
+    font-size: 18px !important;
+    width: 95% !important;
+    padding: 20px;
+  }
+}
 .divBiographie .textBiographie {
   color: #F6EBE2;
   margin-top: 50px;
   line-height: 25px;
   text-align: justify;
+}
+@media all and (max-width: 900px) {
+  .divBiographie .textBiographie {
+    text-align: center;
+  }
 }
 .divBiographie .firstBlockBiographie {
   display: flex;
@@ -1587,6 +1688,7 @@ form .modifyArticle {
     padding: 0;
     align-items: center;
     width: 100%;
+    text-align: center;
   }
   .divBiographie .isabelleTextBio h3 {
     margin-top: 30px !important;
@@ -1651,6 +1753,11 @@ form .modifyArticle {
   color: #F6EBE2;
   font-size: 20px;
 }
+@media all and (max-width: 900px) {
+  .blockIgerieQuoi .listQuoi {
+    font-size: 18px !important;
+  }
+}
 .blockIgerieQuoi .listQuoi .listUl {
   width: 90%;
   padding: 30px;
@@ -1658,6 +1765,12 @@ form .modifyArticle {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media all and (max-width: 900px) {
+  .blockIgerieQuoi .listQuoi .listUl {
+    width: 95% !important;
+    padding: 30px 0 !important;
+  }
 }
 .blockIgerieQuoi .listQuoi li {
   margin: auto;
@@ -2238,16 +2351,19 @@ form .modifyArticle {
 .roueDiv h1 {
   font-size: 28px !important;
   color: #4B0F0B;
-  margin-top: 120px;
+  margin-top: 80px;
 }
 @media all and (max-width: 680px) {
   .roueDiv h1 {
     font-size: 22px !important;
   }
 }
+.roueDiv #wheel {
+  margin-top: 90px;
+}
 .roueDiv #spin {
   position: absolute;
-  top: 340px;
+  top: 430px;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
@@ -2361,7 +2477,7 @@ form .modifyArticle {
 @media all and (max-width: 680px) {
   .roueDiv #selector {
     font-size: 30px;
-    top: 60px;
+    top: 100px;
   }
 }
 .roueDiv #result {
@@ -2428,15 +2544,19 @@ form .modifyArticle {
 }
 
 @media (max-width: 680px) {
+  .roueDiv h1 {
+    margin-top: 80px;
+  }
   #wheel {
-    width: 350px; /* ou toute autre taille que vous souhaitez */
-    height: 350px; /* assurez-vous que la hauteur et la largeur sont les mêmes pour maintenir la roue ronde */
+    width: 300px; /* ou toute autre taille que vous souhaitez */
+    height: 300px; /* assurez-vous que la hauteur et la largeur sont les mêmes pour maintenir la roue ronde */
+    margin-top: 100px;
   }
   #spin {
     width: 60px !important;
     height: 60px !important;
-    font-size: 12px;
-    top: 210px !important;
+    font-size: 14px;
+    top: 281px !important;
   }
 }
 
